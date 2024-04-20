@@ -1,0 +1,38 @@
+<div id="add-button2">
+  <button mat-flat-button color="primary"(click)="book()">BOOK TICKET</button>
+</div>
+
+<div id="add-button2">
+  <button mat-flat-button color="primary"(click)="reload()" routerLink="/tickets">VIEW TICKETS</button>
+</div>
+
+<div id="add-button">
+    <button mat-flat-button color="primary" (click)="openMovieDialog()">ADD MOVIE</button>
+</div>
+
+<div class="center">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th class="mat-header-cell">Id</th>
+          <th class="mat-header-cell">Title</th>
+          <th class="mat-header-cell">Director</th>
+          <th class="mat-header-cell">Duration (min)</th>
+          <th class="mat-header-cell">Genre</th>
+          <th class="mat-header-cell"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of movies" class="mat-row">
+          <td class="mat-cell">{{ movie.id }}</td>
+          <td class="mat-cell">{{ movie.title }}</td>
+          <td class="mat-cell">{{ movie.director }}</td>
+          <td class="mat-cell">{{ movie.durationMinutes }}</td>
+          <td class="mat-cell">{{ movie.genre }}</td>
+          <td class="mat-cell"><button mat-icon-button color="warn"(click)="deleteMovie(movie.id); reload()">
+            <mat-icon>delete</mat-icon>
+        </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

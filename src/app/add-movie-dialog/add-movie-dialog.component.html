@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <form [formGroup]="addMovieForm" (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill" style="margin: 10px;">
+                <mat-label> Title </mat-label>
+                <input matInput id="title" type="text" formControlName="title">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" style="margin: 10px;">
+                <mat-label> Director </mat-label>
+                <input matInput id="director" type="text" formControlName="director">
+              </mat-form-field>
+
+              <mat-divider></mat-divider>
+
+              <mat-form-field appearance="fill" style="margin: 10px;">
+                <mat-label> Duration (min) </mat-label>
+                <input matInput id="durationMinutes" type="number" formControlName="durationMinutes">
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" style="margin: 10px;">
+                <mat-label> Genre </mat-label>
+                <input matInput id="genre" type="text" formControlName="genre">
+              </mat-form-field>
+              <div><button mat-raised-button color="primary" style="margin: 10px" type="submit"> Add Movie </button>
+                <button mat-raised-button color="warn" style="margin: 10px" (click)="close()"> Cancel </button>
+            </div>
+
+        </form>
+        
+    </div>
+</div>

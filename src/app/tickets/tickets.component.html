@@ -1,0 +1,29 @@
+<div id="add-button2"><button mat-flat-button color="primary"(click)="reload()" routerLink="/movies">VIEW MOVIES</button></div>
+
+
+
+<div class="center">
+    <table class="mat-table">
+      <thead>
+        <tr>
+          <th class="mat-header-cell">Id</th>
+          <th class="mat-header-cell">Title</th>
+          <th class="mat-header-cell">Seat Number</th>
+          <th class="mat-header-cell">Price</th>
+          <th class="mat-header-cell">Name</th>
+          <th class="mat-header-cell"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of tickets" class="mat-row">
+          <td class="mat-cell">{{ ticket.id }}</td>
+          <td class="mat-cell">{{ ticket.movie.title }}</td>
+          <td class="mat-cell">{{ ticket.seatNumber }}</td>
+          <td class="mat-cell">{{ ticket.price }}</td>
+          <td class="mat-cell">{{ ticket.customerName }}</td>
+          <td class="mat-cell"><button mat-icon-button color="warn"(click)="deleteTicket(ticket.id); reload()">
+            <mat-icon>delete</mat-icon></button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,24 @@
+<div>
+    <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" style="margin: 10px">
+            <mat-label>Movie id</mat-label>
+            <input matInput id="id" type="number" formControlName="id">
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          <mat-form-field appearance="fill" style="margin: 10px">
+            <mat-label>Your name</mat-label>
+            <input matInput id="id" type="text" formControlName="customerName">
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          <mat-form-field appearance="fill" style="margin: 10px">
+            <mat-label>Seat</mat-label>
+            <input matInput id="id" type="number" formControlName="seatNumber">
+          </mat-form-field>
+          <div style="margin:10px">PRICE: 10$</div>
+        <div>
+            <button mat-raised-button color="primary" style="margin: 10px 10px 10px 10px" type="submit">Book Ticket</button>
+            <button mat-raised-button color="warn" style="margin: 10px 10px 10px 10px" (click)="close()">Cancel</button>
+        </div>
+    </form> 
+</div>
+<div><img src="assets/chairs.jpg" alt="this is a image" style="width: 500px; height: 500px;"></div>
